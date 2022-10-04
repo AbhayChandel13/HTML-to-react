@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainContent = () => {
   return (
-    <div>
+    <>
       <main id="main" className="main">
 
 <div className="pagetitle">
@@ -19,11 +19,11 @@ const MainContent = () => {
 <section className="section dashboard" style={{  "minHeight":"100vh",
   "display": "flex",
   "flexDirection" :" column"}}>
-     
+
 </section>
 
 </main>
-    </div>
+    </>
   )
 }
 
