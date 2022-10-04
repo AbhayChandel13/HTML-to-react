@@ -18,7 +18,7 @@ const MainContent = () => {
 
 <section className="section dashboard" style={{  "minHeight":"100vh",
   "display": "flex",
-  "flex-direction":" column;"}}>
+  "flexDirection" :" column"}}>
   {/* <div className="row">
 
    
