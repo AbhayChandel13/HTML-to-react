@@ -16,8 +16,10 @@ const MainContent = () => {
 </div>
 <h1> You  Are On The Dashboard </h1>
 
-{/* <section className="section dashboard">
-  <div className="row">
+<section className="section dashboard" style={{  "minHeight":"100vh",
+  "display": "flex",
+  "flex-direction":" column;"}}>
+  {/* <div className="row">
 
    
     <div className="col-lg-8">
@@ -478,8 +480,8 @@ const MainContent = () => {
 
     </div>
 
-  </div>
-</section> */}
+  </div> */}
+</section>
 
 </main>
     </div>
