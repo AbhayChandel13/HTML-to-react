@@ -1,6 +1,6 @@
 import React from "react";
 
-const Create = () => {
+const Create = () => {    
   return (
     <>
       <main id="main" className="Main">
@@ -30,27 +30,27 @@ const Create = () => {
                       id="floatingName"
                       placeholder="Your Name"
                     />
-                    <label for="floatingName">Your Name </label>
+                    <label htmlFor="floatingName">Your Name </label>
                   </div>
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="email"
                       className="form-control"
                       id="floatingName"
                       placeholder="Your Email"
                     />
-                    <label for="floatingEmail">Email </label>
+                    <label htmlFor="floatingEmail">Email </label>
                   </div>
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="text"
                       className="form-control"
                       id="floatingName"
                       placeholder="Your Email"
                     />
-                    <label for="floatingEmail">Address</label>
+                    <label htmlFor="floatingEmail">Address</label>
                   </div>
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="text"
                       className="form-control"
@@ -58,7 +58,7 @@ const Create = () => {
                       maxLength={10}
                       placeholder="Your Phone "
                     />
-                    <label for="floatingEmail">Phone Number</label>
+                    <label htmlFor="floatingEmail">Phone Number</label>
                   </div>
                   <div className="text-center">
                     <button type="submit" className="btn btn-primary">
