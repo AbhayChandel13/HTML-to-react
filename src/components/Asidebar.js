@@ -14,7 +14,7 @@ const asidebar = () => {
 
   <li className="nav-item">
     <a className="nav-link collapsed" data-bs-target="#new-nav" data-bs-toggle="collapse" href="/">
-      <i className="bi bi-menu-button-wide"></i><span>New Menu </span><i className="bi bi-chevron-down ms-auto"></i>
+      <i className="bi bi-menu-button-wide"></i><span>Manage Category</span><i className="bi bi-chevron-down ms-auto"></i>
     </a>
     <ul id="new-nav" className="nav-content collapse" data-bs-parent="#sidebar-nav">
     <li>
