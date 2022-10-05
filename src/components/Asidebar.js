@@ -1,17 +1,15 @@
 import React from 'react'
+import {NavLink}  from "react-router-dom";
 
 const asidebar = () => {
   return (
     <>
-        <aside id="sidebar" className="sidebar">
+      <aside id="sidebar" className="sidebar">
 
 <ul className="sidebar-nav" id="sidebar-nav">
 
   <li className="nav-item">
-    <a className="nav-link " href="index.html">
-      <i className="bi bi-grid"></i>
-      <span>Dashboard</span>
-    </a>
+   <NavLink className="nav-link" to="/"><i className="bi bi-grid"></i>Dashboard</NavLink>
   </li>
 
   <li className="nav-item">
@@ -20,14 +18,14 @@ const asidebar = () => {
     </a>
     <ul id="new-nav" className="nav-content collapse" data-bs-parent="#sidebar-nav">
     <li>
-        <a href="/">
+        <NavLink to="/create">
           <i className="bi bi-circle"></i><span>Create</span>
-        </a>
+        </NavLink>
       </li>
       <li>
-        <a href="/">
+        <NavLink to="/read">
           <i className="bi bi-circle"></i><span>Read</span>
-        </a>
+        </NavLink>
       </li>
     </ul>
   </li>
