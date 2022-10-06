@@ -1,6 +1,24 @@
 import React from "react";
 
-const Create = () => {    
+const Create = () => {
+  const responseBody = {};
+
+  let job = {
+    jobTitle: "JavaScript Developer",
+    location: "USA",
+  };
+
+  const inputChangeHandler = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    formData.forEach((value, property) => (responseBody[property] = value));
+    console.log(JSON.stringify(responseBody));
+
+    let newhoonmain = { ...responseBody, ...job };
+    console.log("This is the New Object :", newhoonmain);
+    //console.log(responseBody);
+  };
   return (
     <>
       <main id="main" className="Main">
@@ -22,7 +40,7 @@ const Create = () => {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Create User Form </h5>
-                <form className="row g-3">
+                {/* <form className="row g-3">
                   <div className="form-floating">
                     <input
                       type="text"
@@ -65,6 +83,38 @@ const Create = () => {
                       Submit
                     </button>
                   </div>
+                </form> */}
+
+                {/* <form onSubmit={onSubmitHandler}>
+            <div><label htmlFor="first_name">First Name</label></div>
+            <div><input id="first_name" ref={inputFirstName} type="text"/></div>
+            <div><label htmlFor="last_name">Last Name</label></div>
+            <div><input id="last_name" ref={inputLastName} type="text"/></div>
+            <div><label htmlFor="age">Age</label></div>
+            <div><input id="age" ref={inputAge} type="number"/></div>
+            <input type="submit"/>
+        </form> */}
+
+                <form onSubmit={inputChangeHandler}>
+                  <div>
+                    <label htmlFor="firstName">First Name</label>
+                  </div>
+                  <div>
+                    <input id="firstName" name="firstName" type="text" />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName">Last Name</label>
+                  </div>
+                  <div>
+                    <input id="lastName" name="lastName" type="text" />
+                  </div>
+                  <div>
+                    <label htmlFor="age">Age</label>
+                  </div>
+                  <div>
+                    <input id="age" name="age" type="number" />
+                  </div>
+                  <input type="submit" />
                 </form>
               </div>
             </div>
