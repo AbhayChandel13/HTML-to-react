@@ -1,23 +1,40 @@
 import React from "react";
 
 const Create = () => {
-  const responseBody = {};
+  const responseBody = [];
+ const array1 = ['rohit','rahul','viart']
+ //const obj = Object.assign({}, array1)
 
-  let job = {
-    jobTitle: "JavaScript Developer",
-    location: "USA",
-  };
+  // let job = {
+  //   jobTitle: "JavaScript Developer",
+  //   location: "USA",
+  // };
 
   const inputChangeHandler = (event) => {
     event.preventDefault();
 
+   
+  
     const formData = new FormData(event.currentTarget);
+
     formData.forEach((value, property) => (responseBody[property] = value));
     console.log(JSON.stringify(responseBody));
+    
+    //const newArray = array1.concat(responseBody);
+    const combo = [];
+    //const combo1 = []
 
-    let newhoonmain = { ...responseBody, ...job };
-    console.log("This is the New Object :", newhoonmain);
-    //console.log(responseBody);
+    combo.push(array1,responseBody)
+    // combo1.push(responseBody)
+  //  let newhoonmain = {...responseBody, ...array1 };
+    //console.log("This is the New Object :", newhoonmain);
+    console.log(combo);
+
+    if(responseBody.firstName==="" || responseBody.lastName===""){
+      console.log("Error");
+    }
+
+  // console.log(responseBody.firstName);  
   };
   return (
     <>
