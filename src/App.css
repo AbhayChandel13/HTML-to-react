@@ -35,3 +35,10 @@
     transform: rotate(360deg);
   }
 }
+
+.submitted-form input:placeholder-shown{
+  border: 1px solid red;
+}
+/* *:required {
+  border: 1px solid red;
+} */

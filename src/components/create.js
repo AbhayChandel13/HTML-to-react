@@ -11,10 +11,17 @@ const Create = () => {
   // };
 
   const inputChangeHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault();  
 
+    // const element = document.getElementById('firstName')
+    // element.classList.add('border-danger');
+    //   for (var i=0; i<element.length; i++) {
+    //     element[i].style.borderColor = "red";
+    // }  
+
+    const element = document.getElementsByClassName('required');
+    element.classList.add('submitted-form');
    
-  
     const formData = new FormData(event.currentTarget);
 
     formData.forEach((value, property) => (responseBody[property] = value));
@@ -22,20 +29,29 @@ const Create = () => {
     
     //const newArray = array1.concat(responseBody);
     const combo = [];
-    //const combo1 = []
-
+   
     combo.push(array1,responseBody)
-    // combo1.push(responseBody)
-  //  let newhoonmain = {...responseBody, ...array1 };
+    //  let newhoonmain = {...responseBody, ...array1 };
     //console.log("This is the New Object :", newhoonmain);
     console.log(combo);
 
-    if(responseBody.firstName==="" || responseBody.lastName===""){
-      console.log("Error");
-    }
+  //   if(responseBody.firstName===""){
+  //     console.log("Error");  
+  //     // console.log(responseBody.firstName);  
+  // };
+  
+  
+  //  const elements = document.querySelectorAll('required');
+   //elements.forEach(element => {
+    // if (responseBody.firstName=== "" || responseBody.lastName==="") {    
+    //   element.style.borderColor = "red";
+    // } else {
+    //   console.log("all ok");
+    // }
+    //  });
+  
+  }
 
-  // console.log(responseBody.firstName);  
-  };
   return (
     <>
       <main id="main" className="Main">
@@ -52,11 +68,12 @@ const Create = () => {
           </nav>
         </div>
 
-        <div className="row">
+        <div className="row">        
           <div className="col-lg-12">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body">              
                 <h5 className="card-title">Create User Form </h5>
+                
                 {/* <form className="row g-3">
                   <div className="form-floating">
                     <input
@@ -112,24 +129,24 @@ const Create = () => {
             <input type="submit"/>
         </form> */}
 
-                <form onSubmit={inputChangeHandler}>
-                  <div>
+                <form onSubmit={inputChangeHandler} >
+                  <div >
                     <label htmlFor="firstName">First Name</label>
                   </div>
                   <div>
-                    <input id="firstName" name="firstName" type="text" />
+                <input id="firstName" name="firstName" type="text" className="required" placeholder="firstname"  required/>
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
-                  </div>
+                  </div>  
                   <div>
-                    <input id="lastName" name="lastName" type="text" />
+                    <input id="lastName" name="lastName" type="text" className="required" placeholder="lastname" required />
                   </div>
                   <div>
                     <label htmlFor="age">Age</label>
                   </div>
                   <div>
-                    <input id="age" name="age" type="number" />
+                    <input id="age" name="age" type="number" className="required" placeholder="age" required />
                   </div>
                   <input type="submit" />
                 </form>
@@ -137,9 +154,10 @@ const Create = () => {
             </div>
           </div>
         </div>
-      </main>
-    </>
+    </main>
+     </>
   );
 };
 
 export default Create;
+
