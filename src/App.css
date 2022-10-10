@@ -36,9 +36,28 @@
   }
 }
 
-.submitted-form input:placeholder-shown{
-  border: 1px solid red;
-}
-/* *:required {
+
+/* input:invalid:not(:focus-visible) {  
+  outline: none;
+  border: 2px solid #f32a2a;
+} */
+
+/* input:invalid{
   border: 1px solid red;
 } */
+
+
+/* 
+#nameError {
+  display: none;
+  font-size: 0.8em;
+}
+
+#nameError.visible {
+  display: block;
+}
+
+*/
+input:invalid {
+  border-color: red;
+} 

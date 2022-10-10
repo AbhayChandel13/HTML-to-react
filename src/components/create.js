@@ -5,7 +5,7 @@ const Create = () => {
  const array1 = ['rohit','rahul','viart']
  //const obj = Object.assign({}, array1)
 
-  // let job = {
+  // let job = {  
   //   jobTitle: "JavaScript Developer",
   //   location: "USA",
   // };
@@ -13,15 +13,20 @@ const Create = () => {
   const inputChangeHandler = (event) => {
     event.preventDefault();  
 
-    // const element = document.getElementById('firstName')
-    // element.classList.add('border-danger');
-    //   for (var i=0; i<element.length; i++) {
-    //     element[i].style.borderColor = "red";
-    // }  
+    document.getElementById("submitButton").addEventListener("click", function(){
+      document.getElementById("testForm").className="submitted";
+    });
+    
 
-    const element = document.getElementsByClassName('required');
-    element.classList.add('submitted-form');
-   
+    // const element = document.getElementById('firstName')     
+
+    //const element = document.getElementsByClassName('required');
+    //element.classList.add('submitted-form');
+    // element.style.borderColor = "red";
+    // const element = document.getElementsByClassName('input');
+    // element[0].style.borderColor ="red";
+
+  
     const formData = new FormData(event.currentTarget);
 
     formData.forEach((value, property) => (responseBody[property] = value));
@@ -35,21 +40,9 @@ const Create = () => {
     //console.log("This is the New Object :", newhoonmain);
     console.log(combo);
 
-  //   if(responseBody.firstName===""){
-  //     console.log("Error");  
-  //     // console.log(responseBody.firstName);  
-  // };
-  
-  
-  //  const elements = document.querySelectorAll('required');
-   //elements.forEach(element => {
-    // if (responseBody.firstName=== "" || responseBody.lastName==="") {    
-    //   element.style.borderColor = "red";
-    // } else {
-    //   console.log("all ok");
-    // }
-    //  });
-  
+    //window.location.reload();
+    document.getElementById("testForm").reset();
+   
   }
 
   return (
@@ -129,26 +122,30 @@ const Create = () => {
             <input type="submit"/>
         </form> */}
 
-                <form onSubmit={inputChangeHandler} >
-                  <div >
-                    <label htmlFor="firstName">First Name</label>
-                  </div>
+ 
+                <form onSubmit={inputChangeHandler} id="testForm">
+
                   <div>
-                <input id="firstName" name="firstName" type="text" className="required" placeholder="firstname"  required/>
+                    <label htmlFor="firstName">First Name</label>    
+                  </div> 
+                  <div>        
+                   <input id="firstName" name="firstName" type="text" placeholder="firstname" required/>
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
                   </div>  
                   <div>
-                    <input id="lastName" name="lastName" type="text" className="required" placeholder="lastname" required />
+                    <input id="lastName" name="lastName" type="text" placeholder="lastname" required />
                   </div>
                   <div>
                     <label htmlFor="age">Age</label>
                   </div>
                   <div>
-                    <input id="age" name="age" type="number" className="required" placeholder="age" required />
+                    <input id="age" name="age" type="number" placeholder="age" required />
                   </div>
-                  <input type="submit" />
+                  <div>
+                  <input type="submit" value="submit" id="submitButton" />
+                  </div>                  
                 </form>
               </div>
             </div>
