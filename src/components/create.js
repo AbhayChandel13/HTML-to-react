@@ -12,10 +12,17 @@ const Create = () => {
 
   const inputChangeHandler = (event) => {
     event.preventDefault();  
+    var fname=document.form1.firstName.value; 
+    if (fname ===""){      
+       const element = document.getElementById('firstName')
+       element.style.borderColor = "red"; 
+    }
+    console.log(fname);
 
-    document.getElementById("submitButton").addEventListener("click", function(){
-      document.getElementById("testForm").className="submitted";
-    });
+
+    // document.getElementById("submitButton").addEventListener("click", function(){
+    //   document.getElementById("testForm").className="submitted";
+    // });
     
 
     // const element = document.getElementById('firstName')     
@@ -123,13 +130,13 @@ const Create = () => {
         </form> */}
 
  
-                <form onSubmit={inputChangeHandler} id="testForm">
+                <form onSubmit={inputChangeHandler} id="testForm" name="form1">
 
                   <div>
                     <label htmlFor="firstName">First Name</label>    
                   </div> 
                   <div>        
-                   <input id="firstName" name="firstName" type="text" placeholder="firstname" required/>
+                   <input id="firstName" name="firstName" type="text" placeholder="firstname" required />
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
