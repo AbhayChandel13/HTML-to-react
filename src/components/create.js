@@ -12,17 +12,22 @@ const Create = () => {
 
   const inputChangeHandler = (event) => {
     event.preventDefault();  
-    var fname=document.form1.firstName.value; 
-    if (fname ===""){      
-       const element = document.getElementById('firstName')
-       element.style.borderColor = "red"; 
-    }
-    console.log(fname);
+    var fname= document.form1.firstName.value;
+    
+    //Getting Custom attributes : 
+    const jaava = document.form1.firstName.getAttribute('diwali');
+    console.log(jaava);
 
 
-    // document.getElementById("submitButton").addEventListener("click", function(){
-    //   document.getElementById("testForm").className="submitted";
-    // });
+    //     if (fname ===""){      
+    //    const element = document.getElementById('firstName')
+    //    element.style.borderColor = "red"; 
+    // }
+    // console.log(fname);
+    
+    document.getElementById("submitButton").addEventListener("click", function(){
+      document.getElementById("testForm").className="submitted";
+    });
     
 
     // const element = document.getElementById('firstName')     
@@ -43,8 +48,8 @@ const Create = () => {
     const combo = [];
    
     combo.push(array1,responseBody)
-    //  let newhoonmain = {...responseBody, ...array1 };
-    //console.log("This is the New Object :", newhoonmain);
+    let newhoonmain = {...responseBody, ...array1 };
+    console.log("This is the New Object :", newhoonmain);
     console.log(combo);
 
     //window.location.reload();
@@ -130,13 +135,13 @@ const Create = () => {
         </form> */}
 
  
-                <form onSubmit={inputChangeHandler} id="testForm" name="form1">
+                <form onSubmit={inputChangeHandler} id="testForm" name="form1"> 
 
                   <div>
                     <label htmlFor="firstName">First Name</label>    
                   </div> 
                   <div>        
-                   <input id="firstName" name="firstName" type="text" placeholder="firstname" required />
+                   <input id="firstName" name="firstName" type="text" diwali="mastyaar" data-tag="abhay"  placeholder="firstname" required />
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
