@@ -2,78 +2,67 @@ import React from "react";
 
 const Create = () => {
   const responseBody = [];
- const array1 = ['rohit','rahul','viart']
- //const obj = Object.assign({}, array1)
+  const array1 = ["rohit", "rahul", "viart"];
+  //const obj = Object.assign({}, array1)
 
-  // let job = {  
+  // let job = {
   //   jobTitle: "JavaScript Developer",
   //   location: "USA",
   // };
 
-  function required(e)
-  {
-    e.preventDefault();  
- var a = document.forms["form1"]["firstName"].value;
- var b = document.forms["form1"]["lastName"].value;
- var c = document.forms["form1"]["age"].value;
-  // if (empt == "")
-  // {
-  //alert("Please input a Value");
-//  document.forms["form1"]["input"].style.borderColor = "red";
-  
-  if (a==="" ){
-    alert("Please Fill All Required Fields");
-    document.forms["form1"]["firstName"].style.borderColor = "red"; 
-  }
-  else if(b===""){
-    alert("Please Fill All Required Fields");
-    document.forms["form1"]["lastName"].style.borderColor = "red";
-  }
-  else if(c===""){
-    alert("Please Fill All Required Fields");
-    document.forms["form1"]["age"].style.borderColor = "red";
-  }
-  else 
-  {
-  document.getElementById("testForm").reset();
-  window.location.reload();
-  alert('Code has accepted : you can try another');
-  return true; 
-  }
+  function required(e) {
+    e.preventDefault();
+    var a = document.forms["form1"]["firstName"].value;
+    var b = document.forms["form1"]["lastName"].value;
+    var c = document.forms["form1"]["age"].value;
+    // if (empt == "")
+    // {
+    //alert("Please input a Value");
+    //  document.forms["form1"]["input"].style.borderColor = "red";
 
-     }
+    if (a === "") {
+      alert("Please Fill All Required Fields");
+      document.forms["form1"]["firstName"].style.borderColor = "red";
+    } else if (b === "") {
+      alert("Please Fill All Required Fields");
+      document.forms["form1"]["lastName"].style.borderColor = "red";
+    } else if (c === "") {
+      alert("Please Fill All Required Fields");
+      document.forms["form1"]["age"].style.borderColor = "red";
+    } else {
+      document.getElementById("testForm").reset();
+      window.location.reload();
+      alert("Code has accepted : you can try another");
+      return true;
+    }
+  }
 
   const inputChangeHandler = (event) => {
-    event.preventDefault();  
+    event.preventDefault();
     var fname = document.form1.firstName.value;
 
-    //Getting Custom attributes : 
+    //Getting Custom attributes :
     // const jaava = document.form1.firstName.getAttribute('diwali');
     // console.log(jaava);
 
     // const element = document.getElementsByClassName('anything');
     // element.classList.add("my-class");
-    // element.style.borderColor = "red"; 
+    // element.style.borderColor = "red";
     // element[0].style.borderColor ="red";
 
+    var inputs = document.querySelectorAll("input[type=text]");
+    inputs.forEach(function (input) {
+      input.classList.add("my-class");
+    });
 
-
-      var inputs = document.querySelectorAll('input[type=text]');
-      inputs.forEach(function (input) {
-          input.classList.add("my-class");
-      })
-
-
-      
-  
     const formData = new FormData(event.currentTarget);
 
     formData.forEach((value, property) => (responseBody[property] = value));
-  //  console.log(JSON.stringify(responseBody));
-    
+    //  console.log(JSON.stringify(responseBody));
+
     //const newArray = array1.concat(responseBody);
     const combo = [];
-   
+
     // combo.push(array1,responseBody)
     // let newhoonmain = {...responseBody, ...array1 };
     // console.log("This is the New Object :", newhoonmain);
@@ -81,8 +70,7 @@ const Create = () => {
 
     //window.location.reload();
     document.getElementById("testForm").reset();
-   
-  }
+  };
 
   return (
     <>
@@ -100,12 +88,12 @@ const Create = () => {
           </nav>
         </div>
 
-        <div className="row">        
+        <div className="row">
           <div className="col-lg-12">
             <div className="card">
-              <div className="card-body">              
+              <div className="card-body">
                 <h5 className="card-title">Create User Form </h5>
-                
+
                 {/* <form className="row g-3">
                   <div className="form-floating">
                     <input
@@ -161,38 +149,53 @@ const Create = () => {
             <input type="submit"/>
         </form> */}
 
- 
-                <form onSubmit={inputChangeHandler} id="testForm" name="form1"> 
+                <form onSubmit={inputChangeHandler} id="testForm" name="form1">
                   <div>
-                    <label htmlFor="firstName">First Name</label>    
-                  </div> 
-                  <div>        
-                   <input id="firstName" name="firstName"  type="text" diwali="mastyaar" data-tag="abhay"  placeholder="firstname" />
+                    <label htmlFor="firstName">First Name</label>
+                  </div>
+                  <div>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      diwali="mastyaar"
+                      data-tag="abhay"
+                      placeholder="firstname"
+                    />
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
-                  </div>  
+                  </div>
                   <div>
-                    <input id="lastName" name="lname" type="text" placeholder="lastname"  />
+                    <input
+                      id="lastName"
+                      name="lname"
+                      type="text"
+                      placeholder="lastname"
+                    />
                   </div>
                   <div>
                     <label htmlFor="age">Age</label>
                   </div>
                   <div>
-                    <input id="age" name="age"  type="number" placeholder="age"/>
+                    <input
+                      id="age"
+                      name="age"
+                      type="number"
+                      placeholder="age"
+                    />
                   </div>
                   <div>
-                  <input type="submit" value="submit" id="submitButton" />
-                  </div>                  
+                    <input type="submit" value="submit" id="submitButton" />
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-    </main>
-     </>
+      </main>
+    </>
   );
 };
 
 export default Create;
-
