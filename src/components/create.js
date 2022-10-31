@@ -10,47 +10,74 @@ const Create = () => {
   //   location: "USA",
   // };
 
+  function required(e)
+  {
+    e.preventDefault();  
+ var a = document.forms["form1"]["firstName"].value;
+ var b = document.forms["form1"]["lastName"].value;
+ var c = document.forms["form1"]["age"].value;
+  // if (empt == "")
+  // {
+  //alert("Please input a Value");
+//  document.forms["form1"]["input"].style.borderColor = "red";
+  
+  if (a==="" ){
+    alert("Please Fill All Required Fields");
+    document.forms["form1"]["firstName"].style.borderColor = "red"; 
+  }
+  else if(b===""){
+    alert("Please Fill All Required Fields");
+    document.forms["form1"]["lastName"].style.borderColor = "red";
+  }
+  else if(c===""){
+    alert("Please Fill All Required Fields");
+    document.forms["form1"]["age"].style.borderColor = "red";
+  }
+  else 
+  {
+  document.getElementById("testForm").reset();
+  window.location.reload();
+  alert('Code has accepted : you can try another');
+  return true; 
+  }
+
+     }
+
   const inputChangeHandler = (event) => {
     event.preventDefault();  
-    var fname= document.form1.firstName.value;
-    
+    var fname = document.form1.firstName.value;
+
     //Getting Custom attributes : 
-    const jaava = document.form1.firstName.getAttribute('diwali');
-    console.log(jaava);
+    // const jaava = document.form1.firstName.getAttribute('diwali');
+    // console.log(jaava);
 
-
-    //     if (fname ===""){      
-    //    const element = document.getElementById('firstName')
-    //    element.style.borderColor = "red"; 
-    // }
-    // console.log(fname);
-    
-    document.getElementById("submitButton").addEventListener("click", function(){
-      document.getElementById("testForm").className="submitted";
-    });
-    
-
-    // const element = document.getElementById('firstName')     
-
-    //const element = document.getElementsByClassName('required');
-    //element.classList.add('submitted-form');
-    // element.style.borderColor = "red";
-    // const element = document.getElementsByClassName('input');
+    // const element = document.getElementsByClassName('anything');
+    // element.classList.add("my-class");
+    // element.style.borderColor = "red"; 
     // element[0].style.borderColor ="red";
 
+
+
+      var inputs = document.querySelectorAll('input[type=text]');
+      inputs.forEach(function (input) {
+          input.classList.add("my-class");
+      })
+
+
+      
   
     const formData = new FormData(event.currentTarget);
 
     formData.forEach((value, property) => (responseBody[property] = value));
-    console.log(JSON.stringify(responseBody));
+  //  console.log(JSON.stringify(responseBody));
     
     //const newArray = array1.concat(responseBody);
     const combo = [];
    
-    combo.push(array1,responseBody)
-    let newhoonmain = {...responseBody, ...array1 };
-    console.log("This is the New Object :", newhoonmain);
-    console.log(combo);
+    // combo.push(array1,responseBody)
+    // let newhoonmain = {...responseBody, ...array1 };
+    // console.log("This is the New Object :", newhoonmain);
+    // console.log(combo);
 
     //window.location.reload();
     document.getElementById("testForm").reset();
@@ -136,24 +163,23 @@ const Create = () => {
 
  
                 <form onSubmit={inputChangeHandler} id="testForm" name="form1"> 
-
                   <div>
                     <label htmlFor="firstName">First Name</label>    
                   </div> 
                   <div>        
-                   <input id="firstName" name="firstName" type="text" diwali="mastyaar" data-tag="abhay"  placeholder="firstname" required />
+                   <input id="firstName" name="firstName"  type="text" diwali="mastyaar" data-tag="abhay"  placeholder="firstname" />
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
                   </div>  
                   <div>
-                    <input id="lastName" name="lastName" type="text" placeholder="lastname" required />
+                    <input id="lastName" name="lname" type="text" placeholder="lastname"  />
                   </div>
                   <div>
                     <label htmlFor="age">Age</label>
                   </div>
                   <div>
-                    <input id="age" name="age" type="number" placeholder="age" required />
+                    <input id="age" name="age"  type="number" placeholder="age"/>
                   </div>
                   <div>
                   <input type="submit" value="submit" id="submitButton" />

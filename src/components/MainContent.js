@@ -16,7 +16,6 @@ const MainContent = () => {
           </nav>
         </div>
         <h1> You Are On The Dashboard </h1>
-
       </main>
     </>
   );
