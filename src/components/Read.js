@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Read = () => {
+  
   const [getdata, setData] = useState([]);
 
   const getuser = async () => {
