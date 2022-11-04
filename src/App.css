@@ -17,7 +17,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.Main{
+.Main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,6 @@
   }
 }
 
-
 /* input:invalid:not(:focus-visible) {  
   outline: none;
   border: 2px solid #f32a2a;
@@ -45,7 +44,6 @@
 /* input:invalid{
   border: 1px solid red;
 } */
-
 
 /* 
 #nameError {
