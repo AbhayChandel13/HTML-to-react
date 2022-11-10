@@ -72,7 +72,6 @@ const Create = () => {
     document.getElementById("testForm").reset();
   };
 
-  
   return (
     <>
       <main id="main" className="Main">
