@@ -88,8 +88,6 @@ const Create = () => {
           </nav>
         </div>
 
-
-
         <div className="row">
           <div className="col-lg-12">
             <div className="card">
@@ -152,7 +150,6 @@ const Create = () => {
         </form> */}
 
                 <form onSubmit={inputChangeHandler} id="testForm" name="form1">
-                  
                   <div>
                     <label htmlFor="firstName">First Name</label>
                   </div>
