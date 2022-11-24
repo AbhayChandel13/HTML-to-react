@@ -259,13 +259,7 @@ const asidebar = () => {
             </a>
           </li>
 
-          <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-error-404.html">
-              <i className="bi bi-dash-circle"></i>
-              <span>Error 404</span>
-            </a>
-          </li>
-
+         
           
         </ul>
       </aside>
