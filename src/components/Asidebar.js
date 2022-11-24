@@ -6,9 +6,7 @@ const asidebar = () => {
     <>
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
-
-
-          <li className="nav-item">
+          <li className="nav-item">g
             <NavLink className="nav-link" to="/">
               <i className="bi bi-grid"></i>Dashboard
             </NavLink>
@@ -232,7 +230,6 @@ const asidebar = () => {
               <span>Profile</span>
             </a>
           </li>
-          
 
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-register.html">
@@ -247,9 +244,6 @@ const asidebar = () => {
               <span>Login</span>
             </a>
           </li>
-
-         
-          
         </ul>
       </aside>
     </>
