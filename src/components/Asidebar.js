@@ -232,18 +232,7 @@ const asidebar = () => {
               <span>Profile</span>
             </a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-faq.html">
-              <i className="bi bi-question-circle"></i>
-              <span>F.A.Q</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-contact.html">
-              <i className="bi bi-envelope"></i>
-              <span>Contact</span>
-            </a>
-          </li>
+          
 
           <li className="nav-item">
             <a className="nav-link collapsed" href="pages-register.html">
