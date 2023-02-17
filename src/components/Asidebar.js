@@ -202,12 +202,6 @@ const asidebar = () => {
               data-bs-parent="#sidebar-nav"
             >
               <li>
-                <a href="icons-bootstrap.html">
-                  <i className="bi bi-circle"></i>
-                  <span>Bootstrap Icons</span>
-                </a>
-              </li>
-              <li>
                 <a href="icons-remix.html">
                   <i className="bi bi-circle"></i>
                   <span>Remix Icons</span>
