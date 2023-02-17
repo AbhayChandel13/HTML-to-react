@@ -201,12 +201,6 @@ const asidebar = () => {
               className="nav-content collapse "
               data-bs-parent="#sidebar-nav"
             >
-              <li>
-                <a href="icons-boxicons.html">
-                  <i className="bi bi-circle"></i>
-                  <span>Boxicons</span>
-                </a>
-              </li>
             </ul>
           </li>
 
