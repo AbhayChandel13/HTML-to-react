@@ -8,6 +8,8 @@ const Create = () => {
   // let job = {
   //   jobTitle: "JavaScript Developer",
   //   location: "USA",
+  //   jobTitle: "php Developer",
+  //   location: "Canada",
   // };
 
   function required(e) {
