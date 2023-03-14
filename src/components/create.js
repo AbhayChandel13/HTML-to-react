@@ -6,8 +6,6 @@ const Create = () => {
   //const obj = Object.assign({}, array1)
 
   // let job = {
-  //   jobTitle: "JavaScript Developer",
-  //   location: "USA",
   //   jobTitle: "php Developer",
   //   location: "Canada",
   //   jobTitle: "frontend Developer",
