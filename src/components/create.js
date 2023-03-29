@@ -8,7 +8,7 @@ const Create = () => {
   // let job = {
   //   jobTitle: "php Developer",
   //   location: "Canada",
-  
+
   // };
 
   function required(e) {
