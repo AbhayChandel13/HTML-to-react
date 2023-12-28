@@ -3,8 +3,6 @@ import React from "react";
 const MainContent = () => {
   return (
     <>
-    {/* comment  */}
-
       <main id="main" className="Main">
         <div className="pagetitle">
           <h1>Dashboard</h1>
