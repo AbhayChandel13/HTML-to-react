@@ -95,7 +95,9 @@ const Create = () => {
               <div className="card-body">
                 <h5 className="card-title">Create User Form </h5>
 
-                {/* <form className="row g-3">
+                {/* Comment form fields
+                
+                <form className="row g-3">
                   <div className="form-floating">
                     <input
                       type="text"
